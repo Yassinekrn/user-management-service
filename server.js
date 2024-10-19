@@ -10,6 +10,7 @@ const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const { notFoundHandler, errorHandler } = require("./middleware/errorHandler");
+const { swaggerUi, swaggerSpecs } = require("./config/swagger");
 
 dotenv.config();
 connectDB();
@@ -22,9 +23,12 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 app.use(morgan("dev")); // Log HTTP requests in development mode
 app.use(helmet());
+// swaggerSetup(app);
 
 // User routes
 app.use("/api/users", userRoutes);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 // Catch 404 errors
 app.use(notFoundHandler);
