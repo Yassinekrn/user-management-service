@@ -122,6 +122,15 @@ module.exports = {
                 format: "date",
                 example: "1990-01-01",
             },
+            overdueLoans: {
+                type: "integer",
+                example: 1,
+            },
+            membershipStatus: {
+                type: "string",
+                enum: ["active", "overdue", "suspended"],
+                example: "overdue",
+            },
         },
     },
 };

@@ -1,6 +1,6 @@
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
-const swaggerUserSchema = require("./swaggerUserSchema"); // Import the user schema
+const swaggerUserSchema = require("../swaggerSchemas/swaggerUserSchema"); // Import the user schema
 
 const options = {
     definition: {

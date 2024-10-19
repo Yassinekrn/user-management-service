@@ -1,7 +1,15 @@
 const User = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const asyncHandler = require("express-async-handler");
-const { registerUserSchema } = require("../validation/userValidation");
+const {
+    registerUserSchema,
+    updateUserSchema,
+} = require("../validation/userValidation");
+
+exports.getAllUsers = asyncHandler(async (req, res, next) => {
+    const users = await User.find(); // Fetch all users
+    res.status(200).json(users);
+});
 
 exports.registerUser = asyncHandler(async (req, res, next) => {
     const { error } = registerUserSchema.validate(req.body);
@@ -79,6 +87,8 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
         phoneNumber,
         address,
         dateOfBirth,
+        overdueLoans,
+        membershipStatus,
     } = req.body;
 
     // If the email is being updated, ensure it's unique
@@ -96,6 +106,8 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
     if (phoneNumber) user.phoneNumber = phoneNumber;
     if (address) user.address = address;
     if (dateOfBirth) user.dateOfBirth = dateOfBirth;
+    if (overdueLoans) user.overdueLoans = overdueLoans;
+    if (membershipStatus) user.membershipStatus = membershipStatus;
 
     // If password is being updated, hash it before saving
     if (password) {

@@ -3,9 +3,30 @@ const {
     registerUser,
     deleteUser,
     updateUser,
+    getAllUsers,
 } = require("../controllers/userController");
 
 const router = express.Router();
+
+/**
+ * @swagger
+ * /api/users:
+ *   get:
+ *     summary: Get all users
+ *     tags: [Users]
+ *     responses:
+ *       200:
+ *         description: A list of users
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/User'
+ *       500:
+ *         description: Internal server error
+ */
+router.get("/users", getAllUsers);
 
 /**
  * @swagger
