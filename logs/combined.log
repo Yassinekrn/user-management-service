@@ -1,0 +1,3 @@
+{"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-19T00:35:05.063Z"}
+{"level":"error","message":"Not Found","service":"user-service","timestamp":"2024-10-19T00:35:13.554Z"}
+{"level":"error","message":"404 - Not Found - / - GET - ::1","service":"user-service","timestamp":"2024-10-19T00:35:13.555Z"}

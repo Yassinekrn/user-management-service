@@ -1,0 +1,33 @@
+{
+    "name": "user_management",
+    "version": "1.0.0",
+    "description": "Manages users (library members). This includes user registration, updating user information, and managing membership status (active, overdue loans, etc.).",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "devstart": "nodemon server.js"
+    },
+    "author": "noel",
+    "license": "MIT",
+    "devDependencies": {
+        "nodemon": "^3.1.7"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "body-parser": "^1.20.3",
+        "compression": "^1.7.4",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "express-async-handler": "^1.2.0",
+        "express-rate-limit": "^7.4.1",
+        "helmet": "^8.0.0",
+        "joi": "^17.13.3",
+        "mongoose": "^8.7.1",
+        "morgan": "^1.10.0",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1",
+        "user_management": "file:",
+        "winston": "^3.15.0"
+    }
+}
