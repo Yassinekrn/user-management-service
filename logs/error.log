@@ -7,3 +7,7 @@
 {"level":"error","message":"Not Found","service":"user-service","timestamp":"2024-10-19T10:12:00.717Z"}
 {"level":"error","message":"404 - Not Found - / - GET - ::1","service":"user-service","timestamp":"2024-10-19T10:12:00.720Z"}
 {"level":"error","message":"400 - Expected double-quoted property name in JSON at position 366 - /api/users/register - POST - ::1","service":"user-service","timestamp":"2024-10-19T10:16:02.441Z"}
+{"level":"error","message":"Not Found","service":"user-service","timestamp":"2024-10-24T17:23:56.764Z"}
+{"level":"error","message":"404 - Not Found - /api/users - GET - ::ffff:127.0.0.1","service":"user-service","timestamp":"2024-10-24T17:23:56.766Z"}
+{"level":"error","message":"500 - user.remove is not a function - /api/users/671a849bbaf960ec84e50763 - DELETE - ::1","service":"user-service","timestamp":"2024-10-24T17:33:23.952Z"}
+{"level":"error","message":"500 - user.remove is not a function - /api/users/671a849bbaf960ec84e50763 - DELETE - ::1","service":"user-service","timestamp":"2024-10-24T17:33:30.101Z"}

@@ -26,3 +26,13 @@
 {"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-19T10:39:47.460Z"}
 {"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-19T10:40:38.053Z"}
 {"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-19T10:40:46.662Z"}
+{"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-24T16:50:46.379Z"}
+{"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-24T17:03:21.782Z"}
+{"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-24T17:04:25.742Z"}
+{"level":"error","message":"Not Found","service":"user-service","timestamp":"2024-10-24T17:23:56.764Z"}
+{"level":"error","message":"404 - Not Found - /api/users - GET - ::ffff:127.0.0.1","service":"user-service","timestamp":"2024-10-24T17:23:56.766Z"}
+{"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-24T17:31:23.030Z"}
+{"level":"error","message":"500 - user.remove is not a function - /api/users/671a849bbaf960ec84e50763 - DELETE - ::1","service":"user-service","timestamp":"2024-10-24T17:33:23.952Z"}
+{"level":"error","message":"500 - user.remove is not a function - /api/users/671a849bbaf960ec84e50763 - DELETE - ::1","service":"user-service","timestamp":"2024-10-24T17:33:30.101Z"}
+{"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-24T17:34:21.687Z"}
+{"level":"info","message":"Server running on port 3000","service":"user-service","timestamp":"2024-10-24T17:34:27.801Z"}

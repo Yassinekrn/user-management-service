@@ -1,42 +1,15 @@
-const express = require("express");
-const dotenv = require("dotenv");
+const app = require("./app"); // Import the app
 const logger = require("./utils/logger");
-const morgan = require("morgan");
-const helmet = require("helmet");
-
-const compression = require("compression");
-const bodyParser = require("body-parser");
-
 const connectDB = require("./config/db");
-const userRoutes = require("./routes/userRoutes");
-const { notFoundHandler, errorHandler } = require("./middleware/errorHandler");
-const { swaggerUi, swaggerSpecs } = require("./config/swagger");
-
-dotenv.config();
-connectDB();
-
-const app = express();
-
-app.use(compression()); // Use compression to compress HTTP responses
-app.use(bodyParser.json()); // Parse JSON request bodies
-app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
-
-app.use(morgan("dev")); // Log HTTP requests in development mode
-app.use(helmet());
-// swaggerSetup(app);
-
-// User routes
-app.use("/api/users", userRoutes);
-
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
-
-// Catch 404 errors
-app.use(notFoundHandler);
-
-// Global error handler
-app.use(errorHandler);
+const dotenv = require("dotenv");
 
 const PORT = process.env.PORT || 5000;
+
+dotenv.config();
+if (process.env.NODE_ENV !== "test") {
+    connectDB(); // Connect to MongoDB only if not running tests
+}
+
 app.listen(PORT, () => {
     logger.info(`Server running on port ${PORT}`);
 });
